@@ -1,3 +1,5 @@
+import Point from "./point";
+
 class Tile {
   constructor(props){
     this.position = {y: props.y, x: props.x};

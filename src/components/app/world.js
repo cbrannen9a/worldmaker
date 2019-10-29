@@ -10,6 +10,7 @@ const StyledWorld = styled.div`
 
 const World = ({size}) => {
   const world = generateWorld(size);
+  console.log(world);
   return (<StyledWorld>
    {world.world.map((row, index) => {
       return <TerrainRow key={index} terrainRow={row}/>

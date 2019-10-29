@@ -18,6 +18,7 @@ class Terrain {
       for(let x= 0; x< this.size; x++){
         let t = new Tile({y:y, x:x, size: this.size});
         subarr.push(t);
+        t.generate();
       }
       this.tiles.push(subarr);
     }

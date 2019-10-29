@@ -4,8 +4,6 @@ import PointsRow from "./pointsRow";
 import {COLOUR_MAP} from "../../constants";
 
 const StyledTile = styled.div`
-  width: 10px;
-  height: 10px;
    background-color: ${props => COLOUR_MAP[props.value]}
 `;
 
