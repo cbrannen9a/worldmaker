@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPoint = styled.div`
-  width: 10px;
-  height: 10px;
-  border: 1px solid 
+  width: 3px;
+  height: 3px;
 `;
 
 const Point = ({point}) =>{

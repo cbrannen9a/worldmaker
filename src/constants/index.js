@@ -1,4 +1,4 @@
-export const TERRAIN_VALUES = 10;
+export const TERRAIN_VALUES = 9;
 export const SEED = 1;
 
 export const COLOUR_MAP = [
