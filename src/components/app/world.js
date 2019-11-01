@@ -8,13 +8,15 @@ const StyledWorld = styled.div`
   flex-direction: column;
 `;
 
-const World = ({size}) => {
+const World = ({ size }) => {
   const world = generateWorld(size);
-  return (<StyledWorld>
-   {world.world.map((row, index) => {
-      return <TerrainRow key={index} terrainRow={row}/>
-  })}
-  </StyledWorld>)
+  return (
+    <StyledWorld>
+      {world.world.map((row, index) => {
+        return <TerrainRow key={index} terrainRow={row} />;
+      })}
+    </StyledWorld>
+  );
 };
 
 export default World;

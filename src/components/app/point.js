@@ -6,8 +6,8 @@ const StyledPoint = styled.div`
   height: 3px;
 `;
 
-const Point = ({point}) =>{
-  return <StyledPoint/>
+const Point = ({ point }) => {
+  return <StyledPoint />;
 };
 
 export default Point;
