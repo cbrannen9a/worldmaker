@@ -10,7 +10,7 @@ const TerrainRow = ({ terrainRow }) => {
   return (
     <StyledRow>
       {terrainRow.map((terrain, index) => (
-        <TerrainTile terrain={terrain} />
+        <TerrainTile key={index} terrain={terrain} />
       ))}
     </StyledRow>
   );

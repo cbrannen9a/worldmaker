@@ -10,7 +10,7 @@ const TileRow = ({ value }) => {
   return (
     <StyledRow>
       {value.map((item, index) => (
-        <Tile tile={item} />
+        <Tile key={index} tile={item} />
       ))}
     </StyledRow>
   );

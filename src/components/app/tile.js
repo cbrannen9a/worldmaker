@@ -11,7 +11,7 @@ const Tile = ({ tile }) => {
   return (
     <StyledTile value={tile.value}>
       {tile.points.map((pointsRow, index) => {
-        return <PointsRow points={pointsRow} />;
+        return <PointsRow key={index} points={pointsRow} />;
       })}
     </StyledTile>
   );

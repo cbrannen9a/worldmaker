@@ -10,7 +10,7 @@ const PointsRow = ({ points }) => {
   return (
     <StyledRow>
       {points.map((point, index) => (
-        <Point point={point} />
+        <Point key={index} point={point} />
       ))}
     </StyledRow>
   );
