@@ -7,13 +7,26 @@ const StyledTile = styled.div`
   background-color: ${props => COLOUR_MAP[props.value]};
 `;
 
-const Tile = ({ tile }) => {
+export function ThreeTile({ tile }) {
   return (
-    <StyledTile value={tile.value}>
-      {tile.points.map((pointsRow, index) => {
+    <mesh
+      position={[tile.tileX, -tile.tileY, tile.value / 2]}
+      //rotation={[Math.PI / 2, 0, 0]}
+    >
+      <boxBufferGeometry attach="geometry" args={[1, 1, 1]} />
+      <meshPhysicalMaterial attach="material" color={COLOUR_MAP[tile.value]} />
+    </mesh>
+  );
+}
+
+const Tile = ({ tile }) => {
+  console.log(tile);
+  return (
+    <ThreeTile tile={tile}>
+      {/* {tile.points.map((pointsRow, index) => {
         return <PointsRow key={index} points={pointsRow} />;
-      })}
-    </StyledTile>
+      })} */}
+    </ThreeTile>
   );
 };
 

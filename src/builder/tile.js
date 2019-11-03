@@ -6,6 +6,8 @@ class Tile {
     this.y = props.y;
     this.x = props.x;
     this.size = props.size;
+    this.tileY = props.y + props.terrainY * props.size;
+    this.tileX = props.x + props.terrainX * props.size;
     this.points = [];
     this.value = props.value;
   }
@@ -19,6 +21,15 @@ class Tile {
       }
       this.points.push(subarr);
     }
+  }
+
+  setValue(value) {
+    this.value = value;
+    this.points.forEach(pointsLayer => {
+      pointsLayer.forEach(point => {
+        point.terrainValue = value;
+      });
+    });
   }
 
   getCorners() {

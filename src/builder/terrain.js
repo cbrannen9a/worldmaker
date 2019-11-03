@@ -16,7 +16,13 @@ class Terrain {
     for (let y = 0; y < this.size; y++) {
       let subarr = [];
       for (let x = 0; x < this.size; x++) {
-        let t = new Tile({ y: y, x: x, size: this.size });
+        let t = new Tile({
+          y: y,
+          x: x,
+          size: this.size,
+          terrainY: this.y,
+          terrainX: this.x
+        });
         subarr.push(t);
         t.generate();
       }

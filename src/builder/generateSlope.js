@@ -12,7 +12,7 @@ export const generateSlope = layer => {
 
   const slope = calculateSlope(x1, y1, x2, y2);
   for (let i = 0; i < layer.length; i++) {
-    layer[i].value = calculateValueOnSlope(slope, i, y1);
+    layer[i].setValue(calculateValueOnSlope(slope, i, y1));
   }
 
   return layer;

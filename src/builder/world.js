@@ -26,6 +26,23 @@ class World {
       this.world.push(row);
     }
   }
+
+  flattened() {
+    return this.world
+      .map(worldRow => {
+        return worldRow.map(terrain => {
+          return terrain.tiles.map(tileRow => {
+            return tileRow.map(tile => {
+              return tile;
+              // .points.map(pointsRow => {
+              //   return pointsRow.map(point => point);
+              // });
+            });
+          });
+        });
+      })
+      .flat(Infinity);
+  }
 }
 
 export default World;
